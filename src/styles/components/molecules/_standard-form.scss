@@ -1,0 +1,95 @@
+/* ==========================================================================
+   StandardForm
+   ========================================================================== */
+
+.StandardForm {
+
+  &-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &-field {
+    position: relative;
+    margin-bottom: var(--spacing-block-large);
+
+    &.oneCol {
+      flex: 0 0 calc(50% - var(--spacing-block-standard));
+    }
+
+    &.twoCols {
+      flex: 0 0 100%;
+    }
+  }
+
+  &-error {
+    @extend %TextStyle-caption;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-top: var(--spacing-block-x-small);
+    color: var(--color-ui-error);
+    display: none;
+  }
+
+  input[type="file"],
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  input[type="datetime-local"],
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="password"],
+  textarea {
+    @extend %TextStyle-body3;
+    transition-property: all;
+    color: var(--color-grayscale-dark);
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: #{48 - 10 - 20}px;
+    text-align: left;
+    padding: 20px var(--spacing-block-medium) 10px;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0;
+
+    & + label {
+      @extend %TextStyle-body3;
+      position: absolute;
+      color: var(--color-grayscale-medium);
+      top: var(--spacing-block-standard);
+      left: var(--spacing-block-medium);
+      transition: var(--transition-speed-fast);
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+
+      & + label {
+        @extend %TextStyle-body4;
+        top: 6px;
+      }
+    }
+
+    &.hasError:invalid {
+
+      & ~ .StandardForm-error {
+        display: block;
+      }
+    }
+  }
+
+  textarea {
+    height: auto;
+    line-height: 1.2;
+  }
+
+  &-actions {
+    text-align: center;
+  }
+}

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   SectionEditorial
+   ========================================================================== */
+
+.SectionEditorial {
+  background: var(--color-grayscale-white);
+  padding: var(--spacing-block-x-large) 0;
+
+  &.bgGrayscaleSmokeSolid {
+    background: var(--color-grayscale-smoke);
+  }
+
+  @include breakpoint('tablet') {
+    padding: var(--spacing-block-x-x-x-large) 0;
+  }
+
+  &-inner {
+    @extend %PageWrapper;
+  }
+
+  &-content {
+    text-align: center;
+
+    @include breakpoint('tablet') {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  &-title {
+    @extend %TextStyle-heading2;
+    margin-bottom: var(--spacing-block-medium);
+  }
+
+  &-desc {
+    color: var(--color-grayscale-medium);
+  }
+
+  &-extra {
+    margin-top: var(--spacing-block-x-large);
+  }
+
+  .StandardForm {
+    margin: 0 auto;
+
+    @include breakpoint('tablet') {
+      width: 90%;
+    }
+
+    @include breakpoint('desktop') {
+      width: 70%;
+    }
+  }
+}

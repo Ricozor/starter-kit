@@ -1,0 +1,47 @@
+/* ==========================================================================
+   SectionWork
+   ========================================================================== */
+
+.SectionWork {
+
+  &-list {
+
+    @include breakpoint('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-item {
+    position: relative;
+    height: 100vw;
+
+    @include breakpoint('tablet') {
+      height: 50vw;
+      flex: 0 0 50%;
+    }
+
+    @include breakpoint('desktop') {
+      height: 25vw;
+      flex: 0 0 25%;
+    }
+  }
+
+  &-actions {
+    background: var(--color-grayscale-smoke);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-more {
+    @extend %TextStyle-button1;
+    color: var(--color-grayscale-medium);
+    transition: color var(--transition-speed-fast);
+
+    &:hover {
+      color: var(--color-grayscale-grey);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.ButtonPrimary {
+  @extend %TextStyle-button1;
+  display: inline-block;
+  background: var(--color-brand-first);
+  color: var(--color-grayscale-white);
+  padding: 20px 46px;
+  text-decoration: none;
+  border: none;
+}

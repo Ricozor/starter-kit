@@ -1,0 +1,99 @@
+/* ==========================================================================
+   MainMenu
+   ========================================================================== */
+
+.MainMenu {
+
+  .ButtonBurgerMenu {
+    @include breakpoint('desktop') {
+      display: none;
+    }
+  }
+
+  &-inner {
+    @include breakpoint-between('mobile','tablet') {
+      top: var(--header-height-mobile);
+    }
+
+    @include breakpoint-between('tablet','desktop') {
+      top: var(--header-height-tablet);
+    }
+
+    @include breakpoint-between('mobile','desktop') {
+      //TODO:OPTIM:LAW fix resize desktop to tablet : we se the menu transition
+      visibility: hidden;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      pointer-events: none;
+      transition: visibility 0s var(--transition-speed-medium);
+
+      .isOpened & {
+        visibility: visible;
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  &-content {
+    @include breakpoint-between('mobile','desktop') {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-grayscale-white);
+      transform: translateX(100%);
+      transition: transform var(--transition-speed-medium) ease-in;
+      pointer-events: auto;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .isOpened & {
+        transform: translateX(0);
+        transition-timing-function: ease-out;
+      }
+    }
+  }
+
+  // target native structure for menu
+  ul {
+    display: flex;
+
+    @include breakpoint-between('mobile','desktop') {
+      flex-direction: column;
+      align-items: center;
+      padding: var(--spacing-block-standard);
+    }
+  }
+
+  li {
+    & + li {
+      margin-top: var(--spacing-block-standard);
+
+      @include breakpoint('desktop') {
+        margin-top: 0;
+        margin-left: var(--spacing-block-large);
+      }
+    }
+  }
+
+  a {
+    @extend %TextStyle-button1;
+    transition: color var(--transition-speed-fast);
+
+    &,
+    &:visited {
+      color: var(--color-grayscale-dark);
+    }
+
+    &:focus,
+    &:active,
+    &:hover,
+    &.isActive {
+      color: var(--color-brand-first);
+    }
+  }
+}

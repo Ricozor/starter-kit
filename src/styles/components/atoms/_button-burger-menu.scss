@@ -1,0 +1,84 @@
+/* ==========================================================================
+   BurgerMenu
+   ========================================================================== */
+
+@use 'sass:math';
+
+// defined your data here
+$burgerWidth: 60px;
+$burgerHeight: 48px;
+$burgerLineWidth: 24px;
+$burgerLinesHeight: 16px;
+$burgerLineHeight: 2px;
+$burgerBackground: transparent;
+$burgerLineBackground: var(--color-grayscale-black);
+
+// nothing to do next
+$burgerLineLeft: math.div(($burgerWidth - $burgerLineWidth), 2);
+$burgerLineTop: math.div(($burgerHeight - $burgerLinesHeight), 2);
+$burgerLineMiddle: math.div(($burgerHeight - $burgerLineHeight), 2);
+$burgerLineBottom: $burgerLineTop + $burgerLinesHeight - $burgerLineHeight;
+$burgerDeltaLines: math.div(($burgerLinesHeight - 3 * $burgerLineHeight), 2);
+
+.ButtonBurgerMenu {
+  display: block;
+  width: $burgerWidth;
+  height: $burgerHeight;
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  padding: 0;
+  border: 0;
+  background: $burgerBackground;
+  overflow: hidden;
+
+  &::before,
+  &::after,
+  span {
+    content: '';
+    display: block;
+    position: absolute;
+    height: $burgerLineHeight;
+    width: $burgerLineWidth;
+    background: $burgerLineBackground;
+    opacity: 1;
+    left: $burgerLineLeft;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: .35s; // all ease by default
+  }
+
+  &::before {
+    top: $burgerLineTop;
+  }
+
+  span {
+    top: $burgerLineMiddle;
+    overflow: hidden;
+    text-indent: -99em;
+  }
+
+  &::after {
+    top: $burgerLineBottom;
+  }
+
+  isOpened &,
+  &.isOpened {
+
+    &::before {
+      top: $burgerLineMiddle;
+      transform: rotate(45deg);
+    }
+
+    span {
+      width: 0;
+      opacity: 0;
+      left: 0;
+    }
+
+    &::after {
+      top: $burgerLineMiddle;
+      transform: rotate(-45deg);
+    }
+  }
+}

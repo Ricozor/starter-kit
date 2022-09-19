@@ -1,0 +1,36 @@
+/* ==========================================================================
+   SkipNav
+   ========================================================================== */
+
+.SkipNav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: auto;
+  background: var(--color-brand-first);
+  color: var(--color-grayscale-white);
+  transform: translateY(-200%);
+
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &-item {
+    //
+  }
+
+  &-cta {
+    display: inline-block;
+    padding: .5em 1em;
+    color: inherit;
+    font-size: 1.4rem;
+  }
+
+  &:focus-within {
+    transform: translateY(0);
+  }
+}

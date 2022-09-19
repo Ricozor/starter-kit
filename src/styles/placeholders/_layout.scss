@@ -1,0 +1,17 @@
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+
+%PageWrapper {
+  max-width: var(--max-width);
+  padding: 0 var(--spacing-block-medium);
+  margin: 0 auto;
+
+  @include breakpoint('tablet') {
+    padding: 0 var(--spacing-block-x-large);
+  }
+
+  @include breakpoint('desktop') {
+    padding: 0 98px;
+  }
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Blockquote
+   ========================================================================== */
+
+.Blockquote {
+
+  blockquote {
+
+    p {
+      @extend %TextStyle-overline;
+
+      &:first-of-type {
+
+        &::before {
+          content: '“ ';
+        }
+      }
+
+      &:last-of-type {
+
+        &::after {
+          content: '”';
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: var(--spacing-block-medium);
+  }
+
+  cite {
+    @extend %TextStyle-subtile1;
+  }
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   SectionSkills
+   ========================================================================== */
+
+.SectionSkills {
+  position: relative;
+
+  &-inner {
+    @extend %PageWrapper;
+
+    @include breakpoint('tablet') {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-content {
+    padding: var(--spacing-block-x-large) 0;
+
+    @include breakpoint('tablet') {
+      width: 65%;
+      padding-right: var(--spacing-block-x-large);
+    }
+
+    @include breakpoint('desktop') {
+      margin-right: 50%;
+      padding-right: 84px;
+    }
+  }
+
+  &-title {
+    @extend %TextStyle-heading2;
+    margin-bottom: var(--spacing-block-medium);
+  }
+
+  &-picture {
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @include breakpoint('tablet') {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 35%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include breakpoint('desktop') {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Starter kit</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Mon site description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles/vendors/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="styles/vendors/pe-icon-7-stroke/css/helper.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.scss" />
+</head>
+<body>
+<div class="SiteContainer">
+    <nav class="SkipNav">
+        <ul class="SkipNav-list">
+            <li class="SkipNav-item type-desktop">
+                <a class="SkipNav-cta" href="#nav-principal">Aller au menu</a>
+            </li>
+            <li class="SkipNav-item">
+                <a class="SkipNav-cta" href="#content">Aller au contenu</a>
+            </li>
+            <!--<li class="SkipNav-item type-desktop">
+                <a class="SkipNav-cta" href="#search-header">Aller à la recherche</a>
+            </li>-->
+        </ul>
+    </nav>
+    <header class="SiteHeader">
+        <div class="SiteHeader-inner">
+            <a href="#home" class="SiteLogo">Starter kit</a>
+            <nav class="MainMenu" id="nav-principal">
+                <button type="button" class="ButtonBurgerMenu" title="Menu"><span>Menu</span></button>
+                <div class="MainMenu-inner">
+                    <div class="MainMenu-content">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#process">Process</a></li>
+                            <!-- TODO: valider avec le CP si on doit garder le lien car on a pas le block dans la page -->
+                            <li><a href="https://www.perdu.com">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="MainContent" id="content">
+        <section class="SectionHome">
+            <a class="Anchor" id="home"></a>
+            <div class="SectionHome-picture">
+                <picture>
+                    <!-- TODO: create image tablet and mobile with good ratio -->
+                    <source srcset="img/section-home.webp" media="(min-width: 320px)" type="image/webp">
+                    <source srcset="img/section-home.webp" media="(min-width: 640px)" type="image/webp">
+                    <source srcset="img/section-home.webp" media="(min-width: 960px)" type="image/webp">
+                    <source srcset="img/section-home.jpg" media="(min-width: 320px)" type="image/jpeg">
+                    <source srcset="img/section-home.jpg" media="(min-width: 640px)" type="image/jpeg">
+                    <source srcset="img/section-home.jpg" media="(min-width: 960px)" type="image/jpeg">
+                    <img src="img/section-home.jpg" alt="Image name Home" width="1400" height="921">
+                </picture>
+            </div>
+            <div class="SectionHome-inner">
+                <div class="SectionHome-content">
+                    <div class="SectionHome-title">
+                        <h1>We Design and Develop</h1>
+                    </div>
+                    <div class="SectionHome-desc">
+                        <p>We are a new design studio based in USA. We have over
+                            20 years of combined experience, and know a thing or two
+                            about designing websites and mobile apps.</p>
+                    </div>
+                    <div class="SectionHome-actions">
+                        <a href="#contact" class="ButtonPrimary">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="SectionSkills">
+            <a class="Anchor" id="about"></a>
+            <div class="SectionSkills-inner">
+                <div class="SectionSkills-content">
+                    <div class="SectionSkills-title">
+                        <h2>Professional Skills</h2>
+                    </div>
+                    <div class="SectionSkills-skills">
+                        <div class="Skill">
+                            <div class="Skill-title">
+                                <h3>UI/UX Design<span class="Skill-percent">75%</span></h3>
+                            </div>
+                            <div class="Skill-rail">
+                                <span class="Skill-progress" style="width: 75%;"></span>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="Skill-title">
+                                <h3>web development<span class="Skill-percent">90%</span></h3>
+                            </div>
+                            <div class="Skill-rail">
+                                <span class="Skill-progress" style="width: 90%;"></span>
+                            </div>
+                        </div>
+                        <div class="Skill">
+                            <div class="Skill-title">
+                                <h3>marketing<span class="Skill-percent">65%</span></h3>
+                            </div>
+                            <div class="Skill-rail">
+                                <span class="Skill-progress" style="width: 65%;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="SectionSkills-picture">
+                <picture>
+                    <!-- TODO: create image tablet and mobile with good ratio -->
+                    <source srcset="img/section-skills.webp" media="(min-width: 320px)" type="image/webp">
+                    <source srcset="img/section-skills.webp" media="(min-width: 640px)" type="image/webp">
+                    <source srcset="img/section-skills.webp" media="(min-width: 960px)" type="image/webp">
+                    <source srcset="img/section-skills.jpg" media="(min-width: 320px)" type="image/jpeg">
+                    <source srcset="img/section-skills.jpg" media="(min-width: 640px)" type="image/jpeg">
+                    <source srcset="img/section-skills.jpg" media="(min-width: 960px)" type="image/jpeg">
+                    <img src="img/section-skills.jpg" alt="Image name skills" width="926" height="568" style="object-position: 30% 50%;"><!-- report contributed focal point -->
+                </picture>
+            </div>
+        </section>
+
+
+        <section class="SectionKeyFigures">
+            <div class="SectionKeyFigures-inner">
+                <ul class="KeyFiguresList">
+                    <li class="KeyFiguresList-item">
+                        <div class="KeyFigure KeyFigure--project">
+                            <i class="Icon pe-7s-portfolio"></i>
+                            <div class="KeyFigure-title">
+                                <strong>598</strong>
+                                Projects completed
+                            </div>
+                        </div>
+                    </li>
+                    <li class="KeyFiguresList-item">
+                        <div class="KeyFigure KeyFigure--project">
+                            <i class="Icon pe-7s-clock"></i>
+                            <div class="KeyFigure-title">
+                                <strong>1465</strong>
+                                Working hours
+                            </div>
+                        </div>
+                    </li>
+                    <li class="KeyFiguresList-item">
+                        <div class="KeyFigure KeyFigure--project">
+                            <i class="Icon pe-7s-star"></i>
+                            <div class="KeyFigure-title">
+                                <strong>612</strong>
+                                Positive feedbacks
+                            </div>
+                        </div>
+                    </li>
+                    <li class="KeyFiguresList-item">
+                        <div class="KeyFigure KeyFigure--project">
+                            <i class="Icon pe-7s-like"></i>
+                            <div class="KeyFigure-title">
+                                <strong>735</strong>
+                                Happy clients
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="SectionWork">
+            <a class="Anchor" id="work"></a>
+            <div class="SectionWork-list">
+                <!-- All images need to be contributed at the same size or the wil be resize and crop -->
+                <!-- TODO: demander à la créa si les images peuvent être des png transparant et si il faut applique le damier -->
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=1" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=1" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=2" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=2" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=3" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=3" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=4" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=4" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=5" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=5" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=6" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=6" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=7" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=7" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+                <div class="SectionWork-item">
+                    <a href="#" class="WorkCard pe-7s-look">
+                        <picture>
+                            <source srcset="https://picsum.photos/480/422.webp?random=8" type="image/webp">
+                            <img src="https://picsum.photos/480/422.jpg?random=8" alt="Project title" width="480" height="422">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="SectionWork-actions">
+                <!-- TODO:OPTIM script ajax load more -->
+                <button type="button" class="SectionWork-more">Load more work</button>
+            </div>
+        </section>
+
+
+        <section class="SectionEditorial">
+            <a class="Anchor" id="process"></a>
+            <div class="SectionEditorial-inner">
+                <div class="SectionEditorial-content">
+                    <div class="SectionEditorial-title">
+                        <h2>Our Work Process</h2>
+                    </div>
+                    <div class="SectionEditorial-desc">
+                        <p>Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.</p>
+                    </div>
+                </div>
+                <div class="SectionEditorial-extra">
+                    <div class="VideoPlayer">
+                        <div class="VideoPlayer-poster">
+                            <picture>
+                                <!-- TODO: sources at good ratio jpg + webp-->
+                                <img src="https://peach.blender.org/wp-content/uploads/bbb-splash.png" alt="" />
+                            </picture>
+                        </div>
+                        <template class="VideoPlayer-content">
+                            <video allow="autoplay; fullscreen" controls><source src="http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_stereo_arcd.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+                            <!--<iframe height="100%" width="100%" src="https://www.youtube.com/embed/aqz-KE-bpKQ" frameborder="0" allowfullscreen></iframe>-->
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TODO: /!\ le block est maqueté mais caché, valider avec le CP si on le fait sinon on le supprime -->
+        <!--<section class="SectionServices">
+            <a class="Anchor" id="services"></a>
+            Section Services
+        </section>-->
+
+
+        <section class="SectionTestimonials">
+            <a class="Anchor" id="testimonials"></a>
+            <!--TODO: Demander les autres citation au CP -->
+            <div class="SectionTestimonials-inner">
+                <div class="Slider">
+                    <div class="Slider-list">
+                        <div class="Slider-item">
+                            <div class="Blockquote">
+                                <blockquote>
+                                    <p>Outstanding job and exceeded all expectations. It was a pleasure
+                                        to work with them on a sizable first project and am looking
+                                        forward to start the next one asap.</p>
+                                    <footer>
+                                        <cite>Michael Hopkins</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="Slider-item">
+                            <div class="Blockquote">
+                                <blockquote>
+                                    <p>Ab at consequuntur, eaque impedit nisi perspiciatis porro quaerat unde! A delectus
+                                        deserunt, expedita illo in laborum modi, nobis nostrum officia officiis pariatur
+                                        perspiciatis quam, saepe sapiente ullam voluptates voluptatibus.</p>
+                                    <footer>
+                                        <cite>Jean de la Fontaine</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="Slider-item">
+                            <div class="Blockquote">
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid animi delectus hic ipsa, natus quo rem similique ullam vitae.</p>
+                                    <footer>
+                                        <cite>Barack O'Bama</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="SectionEditorial bgGrayscaleSmokeSolid">
+            <a class="Anchor" id="contact"></a>
+            <div class="SectionEditorial-inner">
+                <div class="SectionEditorial-content">
+                    <div class="SectionEditorial-title">
+                        <h2>Need a Project?</h2>
+                    </div>
+                    <div class="SectionEditorial-desc">
+                        <p>Let us know what you're looking for in an agency. We'll take a look and see
+                            if this could be the start of something beautiful.</p>
+                    </div>
+                </div>
+                <div class="SectionEditorial-extra">
+                    <div class="StandardForm">
+                        <form action="#" id="contactForm" method="POST">
+                            <fieldset>
+                                <div class="StandardForm-grid">
+                                    <div class="StandardForm-field oneCol">
+                                        <input type="text" name="name" id="name" required placeholder="&nbsp;">
+                                        <!-- Keep &nbsp; in placeholder, it's a trick for label active when not empty -->
+                                        <label for="name">Your Name</label>
+                                        <div class="StandardForm-error">Error message</div>
+                                    </div>
+                                    <div class="StandardForm-field oneCol">
+                                        <input type="email" name="email" id="email" required placeholder="&nbsp;">
+                                        <label for="email">Your Email</label>
+                                        <div class="StandardForm-error"></div>
+                                    </div>
+
+                                    <div class="StandardForm-field twoCols">
+                                        <input type="text" name="title" id="title" required placeholder="&nbsp;">
+                                        <label for="title">Your Title</label>
+                                        <div class="StandardForm-error"></div>
+                                    </div>
+                                    <div class="StandardForm-field twoCols">
+                                        <textarea name="comment" id="comment" required placeholder="&nbsp;" rows="5"></textarea>
+                                        <label for="comment">Your Comment</label>
+                                        <div class="StandardForm-error"></div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="StandardForm-actions">
+                                <input type="submit" value="Send message" class="ButtonPrimary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="SiteFooter">
+        <div class="SiteFooter-inner">
+
+            <div class="SiteFooter-copyrights">
+                <p>
+                    <strong>Piroll Design, Inc.</strong>
+                </p>
+                <p>
+                    © 2017 Piroll. All rights reserved.<br>
+                    Designed by robirurk.
+                </p>
+            </div>
+
+            <div class="SiteFooter-contact">
+                <p>
+                    <a href="mailto:hello@pirolltheme.com">hello@pirolltheme.com</a><br>
+                    <a href="tel:+44987065908">+44 987 065 908</a>
+                </p>
+            </div>
+
+            <div class="SiteFooter-menu">
+                <nav class="SecondMenu twoCols">
+                    <ul>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Carreer</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Legals</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="SiteFooter-social">
+                <nav class="SecondMenu">
+                    <ul class="SecondMenu-list">
+                        <li class="SecondMenu-item"><a href="#">Facebook</a></li>
+                        <li class="SecondMenu-item"><a href="#">Twitter</a></li>
+                        <li class="SecondMenu-item"><a href="#">Instagram</a></li>
+                        <li class="SecondMenu-item"><a href="#">Dribbble</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>
+<script async defer type="module" src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* ==========================================================================
+   KeyFigure
+   ========================================================================== */
+
+.KeyFigure {
+  padding: var(--spacing-block-large) 0;
+  display: flex;
+  align-items: center;
+
+  .Icon {
+    margin-right: var(--spacing-block-medium);
+  }
+
+  &-title {
+    @extend %TextStyle-subtile1;
+
+    strong {
+      @extend %TextStyle-heading3;
+      display: block;
+      margin-bottom: var(--spacing-block-small);
+    }
+  }
+}

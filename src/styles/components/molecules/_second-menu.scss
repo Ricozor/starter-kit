@@ -1,0 +1,34 @@
+/* ==========================================================================
+   SecondMenu
+   ========================================================================== */
+
+.SecondMenu {
+
+
+  &.twoCols ul {
+
+    @include breakpoint('tablet') {
+      column-count: 2;
+      column-gap: var(--spacing-block-standard);
+    }
+  }
+
+  // target native structure for menu
+  ul { // use native structure for menu
+    @include breakpoint-between('mobile', 'tablet') {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    @include breakpoint-between('mobile', 'tablet') {
+      margin: var(--spacing-block-x-small);
+    }
+  }
+
+  a {
+    //
+  }
+}

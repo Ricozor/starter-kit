@@ -1,0 +1,39 @@
+/* ==========================================================================
+   SectionTestimonials
+   ========================================================================== */
+
+.SectionTestimonials {
+  padding: var(--spacing-block-x-large) 0;
+  background: var(--color-brand-first);
+  color: var(--color-grayscale-white);
+
+  &-inner {
+    @extend %PageWrapper;
+    text-align: center;
+  }
+
+  .Slider {
+
+    &-item {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .Blockquote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @include breakpoint('tablet') {
+      width: 90%;
+    }
+
+    @include breakpoint('desktop') {
+      width: 70%;
+    }
+  }
+}

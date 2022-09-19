@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Slider
+   ========================================================================== */
+@import "../../node_modules/flickity/css/flickity.css";
+
+.Slider {
+
+  &-list {
+    //
+  }
+
+  &-item {
+    width: 100%; /* full width */
+  }
+
+  .flickity-page-dots {
+    color: inherit;
+
+
+    // TODO:OPTIM increase dot area for a better click/tap but keep the size of the dots  => Do it with an ::after and remove bg on .dot
+    .dot {
+      width: 11px;
+      height: 11px;
+      background: currentColor;
+      transition: tranform var(--transition-speed-fast);
+      margin: 0 var(--spacing-block-x-small);
+
+      &:not(.is-selected) {
+        transform: scale(.7);
+      }
+    }
+  }
+}

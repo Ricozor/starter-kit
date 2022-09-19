@@ -1,0 +1,33 @@
+/* ==========================================================================
+   SiteHeader
+   ========================================================================== */
+
+.SiteHeader {
+  background: var(--color-grayscale-white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--header-height-mobile);
+  flex: 0 0 var(--header-height-mobile);
+
+  @include breakpoint('tablet') {
+    height: var(--header-height-tablet);
+    flex-basis: var(--header-height-tablet);
+  }
+
+  &-inner {
+    @extend %PageWrapper;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .SiteLogo {
+    margin-left: -7px; // adjust left to align width content and keep larger area click
+  }
+
+  .ButtonBurgerMenu {
+    margin-right: -18px; // adjust left to align width content and keep larger area click
+  }
+}

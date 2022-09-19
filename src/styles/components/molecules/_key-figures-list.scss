@@ -1,0 +1,20 @@
+/* ==========================================================================
+   KeyFiguresList
+   ========================================================================== */
+
+.KeyFiguresList {
+
+  @include breakpoint('tablet') {
+    display: grid;
+    column-gap: var(--spacing-block-large);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint('desktop') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &-item {
+    //
+  }
+}

@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Skill
+   ========================================================================== */
+
+.Skill {
+
+  & + & {
+    margin-top: var(--spacing-block-large);
+  }
+
+  &-title {
+    @extend %TextStyle-subtile1;
+    margin-bottom: var(--spacing-block-small);
+  }
+
+  &-percent {
+    margin-left: var(--spacing-block-standard);
+  }
+
+  &-rail {
+    height: 3px;
+    background: var(--color-grayscale-light);
+  }
+
+  &-progress {
+    display: block;
+    height: 100%;
+    background: var(--color-brand-first);
+    width: 0;
+    transition: ease-out var(--transition-speed-slow);
+  }
+
+  &:not(.isInViewport) {
+
+    .Skill-progress {
+      width: 0 !important;
+    }
+  }
+}

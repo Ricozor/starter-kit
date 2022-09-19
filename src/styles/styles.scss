@@ -1,0 +1,63 @@
+/* ==========================================================================
+   GLOBAL SASS
+   ========================================================================== */
+
+
+/* Variables
+   ========================================================================== */
+@import "variables";
+
+/* Normalize
+   ========================================================================== */
+@import "normalize";
+
+/* Mixins
+   ========================================================================== */
+@import "mixins";
+
+/* Placeholders
+   ========================================================================== */
+@import "placeholders/layout";
+@import "placeholders/text-styles";
+
+/* Layout
+   ========================================================================== */
+@import "layout";
+
+/* Components
+   ========================================================================== */
+
+//Atoms
+@import "components/atoms/site-logo";
+@import "components/atoms/button-burger-menu";
+@import "components/atoms/buttons";
+@import "components/atoms/anchor";
+@import "components/atoms/icon";
+@import "components/atoms/video-player";
+@import "components/atoms/blockquote";
+
+//Molecules
+@import "components/molecules/main-menu";
+@import "components/molecules/second-menu";
+@import "components/molecules/skill";
+@import "components/molecules/key-figures-list";
+@import "components/molecules/key-figure";
+@import "components/molecules/work-card";
+@import "components/molecules/slider";
+@import "components/molecules/standard-form";
+
+//Organims
+@import "components/organims/skip-nav";
+@import "components/organims/site-header";
+@import "components/organims/section-home";
+@import "components/organims/section-skills";
+@import "components/organims/section-key-figures";
+@import "components/organims/section-work";
+@import "components/organims/section-editorial";
+@import "components/organims/section-services";
+@import "components/organims/section-testimonials";
+@import "components/organims/section-contact";
+@import "components/organims/site-footer";
+
+
+

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   SectionKeyFigures
+   ========================================================================== */
+
+.SectionKeyFigures {
+  background: var(--color-brand-first);
+  color: var(--color-grayscale-white);
+  padding: var(--spacing-block-large) 0;
+
+  &-inner {
+    @extend %PageWrapper;
+  }
+}

@@ -1,0 +1,94 @@
+/* ==========================================================================
+   SiteFooter
+   ========================================================================== */
+
+.SiteFooter {
+  @extend %TextStyle-body3;
+  color: var(--color-grayscale-semi);
+  background: var(--color-grayscale-dark);
+  margin-top: auto;
+  padding: var(--spacing-block-large) 0;
+  text-align: center;
+
+  @include breakpoint('tablet') {
+    padding: var(--spacing-block-x-large) 0;
+    text-align: left;
+  }
+
+  @include breakpoint('desktop') {
+    padding: var(--spacing-block-x-x-x-large) 0;
+  }
+
+  &-inner {
+    @extend %PageWrapper;
+
+    > * {
+      margin-top: var(--spacing-block-medium);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint('tablet') {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @include breakpoint-between('tablet', 'desktop') {
+      flex-wrap: wrap;
+
+      > * {
+        flex: 0 0 40%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    @include breakpoint('desktop') {
+
+      > * {
+        margin-top: 0;
+        margin-left: var(--spacing-block-small);
+        margin-right: var(--spacing-block-small);
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  strong {
+    @extend %TextStyle-heading3;
+    color: var(--color-grayscale-white)
+  }
+
+}

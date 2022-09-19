@@ -1,0 +1,61 @@
+/* ==========================================================================
+   MIXINS
+   ========================================================================== */
+
+/// Define @content from a specific semantic breakpoint
+/// @name breakpoint
+/// @group Core
+/// @param {string} $device Semantic breakpoint name string
+/// @param {map} $breakpointsSystem [$design-system-breakpoints] Sass map with semantic breakpoints names associated with their values
+
+@mixin breakpoint($device, $breakpoints-system: $DS-breakpoints) {
+  @if map-has-key($breakpoints-system, $device) {
+    @media (min-width: #{map-get($breakpoints-system, $device)}px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/// Define @content from a specific breakpoint
+/// @name tweakpoint
+/// @group Core
+/// @param {number} point Breakpoint value
+
+@mixin tweakpoint($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+
+/// Define @content between two semantic breakpoints
+/// @name breakpoint-between
+/// @group Core
+/// @param {number} $deviceMin Semantic breakpoint name string
+/// @param {number} $deviceMax [$DS-breakpoints] Sass map with semantic breakpoints names associated with their values
+
+@mixin breakpoint-between($deviceMin, $deviceMax){
+
+  $mediaQuery: "";
+
+  @if map-has-key($DS-breakpoints, $deviceMin) {
+
+    $mediaQuery: $mediaQuery + "(min-width: #{map-get($DS-breakpoints, $deviceMin)}px)";
+
+  }
+
+  @if map-has-key($DS-breakpoints, $deviceMax) {
+
+    @if $mediaQuery != "" {
+      $mediaQuery: $mediaQuery + " and ";
+    }
+    $mediaQuery: $mediaQuery + "(max-width: #{map-get($DS-breakpoints, $deviceMax) - 1px})";
+
+  }
+
+  @media #{$mediaQuery} {
+    @content;
+  }
+
+}

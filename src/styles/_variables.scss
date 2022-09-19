@@ -1,0 +1,58 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+$DS-breakpoints:(
+  "tablet": 640,
+  "desktop": 960,
+  "desktop-large": 1280,
+);
+$maxWidth: 1366;
+
+$headerHeightMobile: 60;
+$headerHeightTablet: 100;
+
+:root {
+  // colors
+  --color-brand-first: #cc00ff;
+
+  --color-grayscale-white: #fff;
+  --color-grayscale-smoke: #f5f5f5;
+  --color-grayscale-light: #d8d8d8;
+  --color-grayscale-semi: #bcbcbc;
+  --color-grayscale-medium: #838383;
+  --color-grayscale-grey: #373737;
+  --color-grayscale-dark: #171717;
+  --color-grayscale-black: #000;
+
+  --color-ui-error: #ff0000;
+  --color-ui-success: #00ff00;
+  --color-ui-warning: #ff6600;
+  --color-ui-info: #0000ff;
+
+  // fonts
+  --font-main: 'Montserrat', sans-serif;
+  --font-second: 'Nunito Sans', sans-serif;
+
+  // layout
+  --header-height-mobile: #{$headerHeightMobile}px;
+  --header-height-tablet: #{$headerHeightTablet}px;
+  --max-width: #{$maxWidth}px;
+
+  //spacing
+  --spacing-block-x-x-x-large: 96px;
+  --spacing-block-x-x-large: 64px;
+  --spacing-block-x-large: 48px;
+  --spacing-block-large: 32px;
+  --spacing-block-medium: 24px;
+  --spacing-block-standard: 16px;
+  --spacing-block-small: 8px;
+  --spacing-block-x-small: 4px;
+
+  //transition
+  --transition-speed-fast: .15s;
+  --transition-speed-standard: .35s;
+  --transition-speed-medium: .55s;
+  --transition-speed-slow: 1s;
+  --transition-speed-x-slow: 2s;
+}

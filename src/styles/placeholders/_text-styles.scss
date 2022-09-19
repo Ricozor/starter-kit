@@ -1,0 +1,104 @@
+/* ==========================================================================
+   PLACEHOLDERS
+   ========================================================================== */
+
+
+/// Heading style level #1
+/// @name TextStyle-heading1
+.TextStyle-heading1,
+%TextStyle-heading1 {
+  font-family: var(--font-main);
+  font-size: 3.8rem;
+  font-weight: 500;
+}
+
+/// Heading style level #2
+/// @name TextStyle-heading2
+.TextStyle-heading2,
+%TextStyle-heading2 {
+  font-family: var(--font-main);
+  font-size: 3rem;
+  font-weight: 500;
+}
+/// Heading style level #3
+/// @name TextStyle-heading3
+.TextStyle-heading3,
+%TextStyle-heading3 {
+  font-family: var(--font-main);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/// Subtitle style #1
+/// @name TextStyle-subtitle1
+.TextStyle-subtile1,
+%TextStyle-subtile1 {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/// Body text style level #1 (for standard paragraph)
+/// @name TextStyle-body1
+.TextStyle-body1,
+%TextStyle-body1 {
+  font-family: var(--font-second);
+  font-size: 1.6rem;
+}
+
+/// Body text style level #2 (for highlighted block paragraph)
+/// @name TextStyle-body2
+.TextStyle-body2,
+%TextStyle-body2 {
+  font-family: var(--font-second);
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/// Body text style level #3 (for footer and forms)
+/// @name TextStyle-body3
+.TextStyle-body3,
+%TextStyle-body3 {
+  font-family: var(--font-second);
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/// Body text style level #4 (for footer)
+/// @name TextStyle-body4
+.TextStyle-body4,
+%TextStyle-body4 {
+  font-family: var(--font-second);
+  font-size: 1.3rem;
+  line-height: 1.1;
+}
+
+/// Caption style (example: error messages,  legend or details)
+/// @name TextStyle-caption
+.TextStyle-caption,
+%TextStyle-caption {
+  font-family: var(--font-second);
+  font-size: 1rem;
+}
+
+/// Alternate style for highlighted body text (example: blockquote)
+/// @name TextStyle-overline
+.TextStyle-overline,
+%TextStyle-overline {
+  font-family: var(--font-main);
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/// Button style #1
+/// @name TextStyle-button1
+.TextStyle-button1,
+%TextStyle-button1 {
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+}
